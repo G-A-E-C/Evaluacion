@@ -10,7 +10,10 @@ package games;
  */
 public class Usuario {
     private int puntos;
-
+    private String correo;
+    private String contrasenia;
+    private String nombre;
+    
     public Usuario() {
         this.puntos = 0;
     }
