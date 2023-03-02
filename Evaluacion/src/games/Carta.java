@@ -15,6 +15,7 @@ public class Carta {
    public boolean used = false;
    public int id;
    public String symbol;
+   public String nombre;
 	
     public Carta(int n, String s, int z) {
 	if (n > 1 && n < 11) {
