@@ -24,21 +24,21 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="0" attributes="0">
-              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <Component id="pnlImagen" min="-2" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jPanel2" max="32767" attributes="0"/>
+              <Component id="pnlPrincipal" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jPanel1" max="32767" attributes="0"/>
-          <Component id="jPanel2" alignment="0" max="32767" attributes="0"/>
+          <Component id="pnlImagen" max="32767" attributes="0"/>
+          <Component id="pnlPrincipal" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
   <SubComponents>
-    <Container class="javax.swing.JPanel" name="jPanel1">
+    <Container class="javax.swing.JPanel" name="pnlImagen">
 
       <Layout>
         <DimensionLayout dim="0">
@@ -53,20 +53,90 @@
         </DimensionLayout>
       </Layout>
     </Container>
-    <Container class="javax.swing.JPanel" name="jPanel2">
+    <Container class="javax.swing.JPanel" name="pnlPrincipal">
 
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="361" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="lblUsuario" min="-2" max="-2" attributes="0"/>
+                      <Component id="lblContraseñaç" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Component id="txtUsuario" max="32767" attributes="0"/>
+                      <Component id="txtContraseña" max="32767" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="155" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="lblAcceso" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="116" max="-2" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="btnAcceder" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="24" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                  <Component id="lblAcceso" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblUsuario" alignment="3" min="-2" pref="24" max="-2" attributes="0"/>
+                      <Component id="txtUsuario" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="lblContraseñaç" alignment="3" min="-2" pref="26" max="-2" attributes="0"/>
+                      <Component id="txtContraseña" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="btnAcceder" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
       </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="lblUsuario">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Usuario:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblContrase&#xf1;a&#xe7;">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Contrase&#xf1;a:"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="txtUsuario">
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="txtContrase&#xf1;a">
+        </Component>
+        <Component class="javax.swing.JLabel" name="lblAcceso">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Acceso al centro "/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JToggleButton" name="btnAcceder">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="Entrar"/>
+          </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnAccederMouseClicked"/>
+          </Events>
+        </Component>
+      </SubComponents>
     </Container>
   </SubComponents>
 </Form>
