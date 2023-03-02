@@ -11,7 +11,7 @@ package games;
 public class Usuario {
     private int puntos;
     private String correo;
-    private String contrasenia;
+    private String password;
     private String nombre;
     
     public Usuario() {
@@ -24,6 +24,30 @@ public class Usuario {
 
     public void ganaPunto() {
         this.puntos++;
+    }
+
+    public String getCorreo() {
+        return correo;
+    }
+
+    public void setCorreo(String correo) {
+        this.correo = correo;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
     
 }

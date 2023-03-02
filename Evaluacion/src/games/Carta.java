@@ -9,25 +9,47 @@ package games;
  * @author Smart
  */
 public class Carta {
-    private String palo;
-    private String valor;
-
-    public Carta(String palo, String valor) {
-        this.palo = palo;
-        this.valor = valor;
-    }
-
-    public int getValorNumerico() {
-        if (this.valor.equals("A")) {
-            return 11;
-        } else if (this.valor.equals("J") || this.valor.equals("Q") || this.valor.equals("K")) {
-            return 10;
-        } else {
-            return Integer.parseInt(this.valor);
+   public String name;
+   public int value;
+   public String shape;
+   public boolean used = false;
+   public int id;
+   public String symbol;
+	
+    public Carta(int n, String s, int z) {
+	if (n > 1 && n < 11) {
+            this.name = Integer.toString(n);
+            this.value = n;
+            this.symbol = this.name;
+        } else if (n > 10) {
+            this.value = 10;
+            if (n == 11) {
+                this.name = "Jack";
+                this.symbol = "J";
+            } else if (n == 12) {
+                this.name = "Queen";
+                this.symbol = "Q";
+            } else if (n == 13) {
+                this.name = "King";
+                this.symbol = "K";
+            }
+        } else if (n == 1) {
+            this.value = 1;
+            this.name = "Ace";
+            this.symbol = "A";
         }
+        this.shape = s;
+        this.id = z;
+    //System.out.println("New Card : " + name + " of " + shape + " (id = " + id + ")");
     }
-
-    public String toString() {
-        return this.valor + " de " + this.palo;
+	
+    public void setUsed() {
+	used = true;
+	//	System.out.println("The Card  " + name + " of " + shape + " is now used");
+    }
+	
+    public void setNotUsed() {
+	used = false;
+	//	System.out.println("The Card  " + name + " of " + shape + " is now not used");
     }
 }
