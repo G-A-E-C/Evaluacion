@@ -4,6 +4,7 @@
  */
 package games;
 
+import games.gui.FormRegistro;
 import games.gui.MainFrame;
 
 /**
@@ -20,7 +21,7 @@ public class Main implements Runnable{
     public int Hz = 100;
 	
     MainFrame gui = new MainFrame();
-	
+    FormRegistro form = new FormRegistro();
     public static void main(String[] args) {
 	new Thread(new Main()).start();
     }
@@ -29,6 +30,7 @@ public class Main implements Runnable{
     public void run() {
 	while(terminator == false) {
             if (System.nanoTime() - xTime >= 1000000000/Hz) {
+                
                 gui.refresher();
                 gui.repaint();
                 xTime = System.nanoTime();
